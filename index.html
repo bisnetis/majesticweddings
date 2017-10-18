@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Majestic Weddings</title>
+		<meta name="description" content="Majestic Weddings | Plan my day bride tools">
+		<meta name="author" content="Bisnet Internet Services">
+		<link rel="stylesheet" href="animate.css" type="text/css">
+	</head>
+	<body>
+		<!-- MAIN STYLING -->
+		<style>
+			html, body {
+				margin: 0;
+				padding: 0;
+				overflow: hidden;
+			}
+		
+			#main_frame {
+				width: 100vw;
+				height: 100vh;
+				border: 0;
+				margin: 0;
+				padding: 0;
+			}
+			
+			#loader_container {
+				background-color: #AFE9EA;
+				padding: 35px 0px;
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				text-align: center;
+				width: 100%; 
+				z-index: 9999999;
+			}
+			
+			#loader_container img {
+				max-width: 80%;
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			
+			.delay-0.5s {
+				-webkit-animation-delay: 0.5s;
+				animation-delay: 0.5s;
+			}
+			
+			.delay-1s {
+				-webkit-animation-delay: 1s;
+				animation-delay: 1s;
+			}
+			
+			.delay-2s {
+				-webkit-animation-delay: 2s;
+				animation-delay: 2s;
+			}
+			
+			.no-display {
+				display: none;
+			}
+		</style>
+		<!-- MAIN SCRIPTING -->
+		<script>
+			var run_time = 0;
+			var frame_loaded = false;
+			
+			var interval_func = window.setInterval(function () {
+				if (run_time > 3 && frame_loaded === true) {
+					document.getElementById("loader_container").className = "animated fadeOut";
+					document.getElementById("main_frame").className = "animated fadeIn";
+					
+					window.setTimeout(function () { document.getElementById("loader_container").className = "no-display"; }, 1000);
+					
+					window.clearInterval(interval_func);
+					
+					
+				}
+				
+				run_time += 1;
+			}, 1000);
+			
+		</script>
+		
+		<div id="loader_container" class="animated fadeIn"><img src="logo.png" class="delay-1s animated zoomIn"></div>
+		
+		<script>
+			var iframe = document.createElement('iframe');
+			iframe.onload = function() { frame_loaded = true; };
+			iframe.setAttribute("id", "main_frame");
+			iframe.setAttribute("class", "no-display");
+			iframe.src = "http://www.majesticweddings.co.za/app/index.php";
+			document.body.appendChild(iframe);
+		</script>
+	</body>
+</html>

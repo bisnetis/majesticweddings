@@ -62,7 +62,6 @@
     <preference name="android-targetSdkVersion" value="21"/>
     <preference name="android-installLocation" value="auto"/>
     <preference name="android-signed" value="true"/>
-    <preference name="Orientation" value="landscape"/>
     <preference name="AndroidLaunchMode" value="singleTop"/>
 </platform>
 <platform name="ios" >

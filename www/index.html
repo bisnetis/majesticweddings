@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Majestic Weddings</title>
+		<title>Majestic Weddings Plan My Day</title>
 		<meta name="description" content="Majestic Weddings | Plan my day bride tools">
 		<meta name="author" content="Bisnet Internet Services">
 		<link rel="stylesheet" href="animate.css" type="text/css">
@@ -65,7 +65,7 @@
 		</style>
 		<!-- MAIN SCRIPTING -->
 		<script>
-			var run_time = 0;
+			/*var run_time = 0;
 			var frame_loaded = false;
 			
 			var interval_func = window.setInterval(function () {
@@ -81,19 +81,20 @@
 				}
 				
 				run_time += 1;
-			}, 1000);
+			}, 1000);*/
 			
 		</script>
 		
 		<div id="loader_container" class="animated fadeIn"><img src="logo.png" class="delay-1s animated zoomIn"></div>
 		
 		<script>
-			var iframe = document.createElement('iframe');
-			iframe.onload = function() { frame_loaded = true; };
-			iframe.setAttribute("id", "main_frame");
-			iframe.setAttribute("class", "no-display");
-			iframe.src = "http://www.majesticweddings.co.za/app/index.php";
-			document.body.appendChild(iframe);
+			//var iframe = document.createElement('iframe');
+			//iframe.onload = function() { frame_loaded = true; };
+			//iframe.setAttribute("id", "main_frame");
+			//iframe.setAttribute("class", "no-display");
+			window.location.href = "http://www.majesticweddings.co.za/app/index.php";
+			//iframe.src = "http://www.majesticweddings.co.za/app/index.php";
+			//document.body.appendChild(iframe);
 		</script>
 	</body>
 </html>
